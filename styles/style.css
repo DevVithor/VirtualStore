@@ -1,0 +1,18 @@
+#products{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: flex;
+  }
+    
+  #cart{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2%;
+    display: block;
+  }
+
+  .produto-single{
+    width: 33.3%;
+    padding:0 20px;
+  }
