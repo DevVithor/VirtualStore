@@ -4,73 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Loja Virtual</title>
+    <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <div id="produts"></div>
-    <div id="car"></div>
-
-    <script>
-      const items = [
-        {
-          id: 0,
-          name: "shirt",
-          img: "assents/shirt.jpg",
-          amount: 0,
-        },
-        {
-          id: 2,
-          name: "shoes",
-          img: "assents/shoes.jpg",
-          amount: 0,
-        },
-        {
-          id: 3,
-          name: "short",
-          img: "assents/short.jpg",
-          amount: 0,
-        },
-      ];
-
-      StartStore = () => {
-        var containerProduts = document.getElementById("produts");
-        items.map((val) => {
-          console.log(val.name);
-          containerProduts.innerHTML +=
-            `
-
-          <div class="produto-single">
-            <img src="` +
-            val.img +
-            `" />
-            <p>` +
-            val.name +
-            `</p>
-            <a key="` +
-            val.id +
-            `" href="#">adicionar ao carrinho!<a/>
-          </div>
-
-
-            `;
-        });
-      };
-
-      StartStore();
-
-      updateCar = () => {
-        console.log(items);
-      };
-
-      var links = document.getElementsByTagName("a");
-
-      for (var i = 0; i < links.length; i++) {
-        links[i].addEventListener("click", function () {
-          let key = this.getAttribute("key");
-          items[key].quantidade++;
-          updateCar();
-          return false;
-        });
-      }
-    </script>
+    <h2>Showcase:</h2>
+    <div id="products"></div>
+    <h2>Cart:</h2>
+    <div id="cart"></div>
+    <script src="store.js"></script>
   </body>
 </html>
