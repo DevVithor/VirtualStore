@@ -7,6 +7,6 @@ const knex = require('knex')({
         password: '',
         database: 'virtualstore'
     }
-})
+});
 
 module.exports = knex
